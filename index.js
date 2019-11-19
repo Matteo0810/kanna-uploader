@@ -4,11 +4,9 @@ const express = require("express"),
     path = require("path");
 
 app.set('view engine', 'twig');
-app.set('trust proxy', 'loopback');
 app.set('env', 'production');
-app.disable('x-powered-by');
 
-//load les assets
+//load assets
 app.use("/assets", express.static(path.resolve(__dirname, "./public")));
 
 //routes
