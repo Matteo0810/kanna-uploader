@@ -1,0 +1,23 @@
+{% extends "Layout/layout.twig" %}
+{% block title %}Home{% endblock %}
+{% block content %}
+
+    <div class="main_content">
+        <label for="video">
+            <img class="logo" src="/assets/img/kanna_logo.jpg" alt="Kanna picture's"/>
+            <span class="hover_text">Click to upload video</span>
+        </label>
+        <input type="file" id="video" name="video" accept="video/avi, video/wmv, video/mkv, video/flv, video/mp4, video/mks, video/rmvb">
+        <div class="content">
+            <ul class="content_list">
+                <li class="content_item">Share</li>
+                <li class="content_item">Upload</li>
+                <li class="content_item">Embed</li>
+            </ul>
+            <p class="content_container_text">
+                our videos
+            </p>
+        </div>
+    </div>
+
+{% endblock %}
