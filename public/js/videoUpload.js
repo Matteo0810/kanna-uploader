@@ -31,25 +31,3 @@ function closeUploaderForm() {
         $("body").load(`${window.location.href}#box`);
     })
 }
-
-//upload and storage the video
-function uploadVideo() {
-    $('.profil_file').addClass('disabled')
-    file = $("#avatar")[0].files[0],
-        data = new FormData();
-    data.append("doc", file);
-    $.ajax({
-        type: "POST",
-        url: `./src/assets/php/POST/profil.php`,
-        data: data,
-        cache: false,
-        contentType: false,
-        processData: false,
-        success: () => {
-            $(location).attr('href', '/profil')
-        },
-        error: (xhr) => {
-            console.log(xhr.responseText)
-        }
-    });
-}
