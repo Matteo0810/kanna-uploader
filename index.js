@@ -4,7 +4,6 @@ const express = require("express"),
     path = require("path");
 
 app.set('view engine', 'twig');
-app.set('env', 'production');
 
 //load assets
 app.use("/assets", express.static(path.resolve(__dirname, "./public")));
